@@ -99,8 +99,53 @@ trimesh
 
 ---
 
+## Setup and Installation
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/BarnitaSharma/Part-based-3D-Reconstruction.git
+cd Part-based-3D-Reconstruction
+
+```
+
+### Create Conda Environment 
+
+```bash
+conda create -n part3d python=3.8 -y
+conda activate part3d
+```
+
+### Install Dependencies
+
+Install dependencies using requirements.txt:
+pip install -r requirements.txt
+
+Alternatively, install them manually:
+
+pip install numpy scipy opencv-python scikit-image scikit-learn \
+            matplotlib pillow pandas tqdm plotly ipywidgets \
+            open3d trimesh
+
+### Install Jupyter
+
+Jupyter is required to run the notebooks and is installed separately:
+
+```bash
+pip install notebook jupyterlab
+```
+
+### Launch Jupyter
+jupyter notebook
+
+
 ## Notes
 
 - The code assumes four-way symmetry and part-level semantic masks
 - Reference results are provided for reproducibility
 - New runs are automatically written to `results_temp/`
+- The core reconstruction pipeline runs on CPU and does not require a GPU
+- Semantic part segmentation is optional and uses Segment Anything (GPU-based), provided in `6.Interactive_part_segmentation.ipynb`
+- All experiments in the project use precomputed masks; the segmentation notebook is intended for custom data or further evaluation
+- Core reconstruction functions are implemented in the `utils/` directory
+- Segmentation and interactive tools are implemented in `segmentation_utils/`
