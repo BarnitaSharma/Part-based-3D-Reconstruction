@@ -119,13 +119,17 @@ conda activate part3d
 ### Install Dependencies
 
 Install dependencies using requirements.txt:
+```bash
 pip install -r requirements.txt
+```
 
 Alternatively, install them manually:
 
+```bash
 pip install numpy scipy opencv-python scikit-image scikit-learn \
             matplotlib pillow pandas tqdm plotly ipywidgets \
             open3d trimesh
+```
 
 ### Install Jupyter
 
@@ -136,8 +140,9 @@ pip install notebook jupyterlab
 ```
 
 ### Launch Jupyter
+```bash
 jupyter notebook
-
+```
 
 ## Notes
 
